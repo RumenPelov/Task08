@@ -1,13 +1,78 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Comfortaa&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  padding: 0; }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Comfortaa', cursive; }
+
+.message {
+  display: flex;
+  align-items: stretch;
+  color: #999999;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  width: 100%;
+  height: 100px; }
+  .message__subject {
+    width: 70%;
+    padding: 2rem 1.8rem; }
+    .message__subject h4 {
+      font-size: 1.1rem; }
+  .message__team {
+    width: 30%;
+    padding: 2rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+
+.paragraph {
+  font-size: 1.2rem; }
+  .paragraph-small {
+    font-size: 1rem; }
+  .paragraph-medium {
+    font-size: 1.1rem; }
+
+.mb-small {
+  margin-bottom: 1rem; }
+
+.mt-small {
+  margin-top: .2rem; }
+
+.high-rating {
+  color: #9335ff; }
+
+.low-rating {
+  color: #e89d40; }
+
+.container {
+  max-width: 768px;
+  min-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2; }
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 550px;
+  height: 400px; }
+  @media only screen and (max-width: 700px) {
+    .list-container {
+      width: 100%; } }

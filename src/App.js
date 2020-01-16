@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { DATA_URL } from './constants';
+import ThreadsList from './components/ThreadsList';
 
 function App() {
+  const [threads, setThreads] = useState([]);
+
+  useEffect(() => {
+    axios.get(DATA_URL)
+      .then((data) => {
+        setThreads(data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="list-container">
+        {threads.length > 0 ? <ThreadsList threads={threads} /> : <div>Loading...</div>}
+      </div>
     </div>
   );
 }
