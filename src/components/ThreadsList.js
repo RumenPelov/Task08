@@ -3,9 +3,12 @@ import Thread from './Thread';
 
 const ThreadsList = ({threads}) => {
 
-    //console.log(threads);
+    const rendereList = () => threads.map((thread, i) => <Thread key={i} thread={thread} /> )
+
     return (
-        <Thread thread={threads[0]} />
+        <div>
+            {rendereList()}
+        </div>
     )
 }
 

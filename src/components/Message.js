@@ -23,7 +23,6 @@ const Massage = ({msg:{msg, count, index}}) => {
         </div>
     
     )
-
 }
 
 export default Massage;

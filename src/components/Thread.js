@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Message from './Message';
 
 const Thread = ({thread}) => {
-    const sortedThread = thread.map(msg =>  msg.score ? {...msg} : {...msg, score:1})
-                            .sort((a, b) => b.score - a.score);
-    const collapsed = sortedThread.length > 1 ? true : false;
+    const [collapsed, setCollapsed] = useState(thread.length > 1 ? true : false);
 
     const renderThreads = () => {
-        return sortedThread.map((msg, index, arr) => {
+        return thread.map(( msg, index, arr) => {
             const count = collapsed ? arr.length : 1;
 
             const offset = collapsed ? {
@@ -24,14 +22,12 @@ const Thread = ({thread}) => {
                     <Message msg={{msg, count, index}} /> 
                 </div>
             )
-
-            
         })
     } 
 
     return (
-        <div className="thred">
-            {renderThreads()}
+        <div className="thred" onClick={() => setCollapsed(false)}>
+            {renderThreads() }
         </div>
     )
 }
