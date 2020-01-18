@@ -1,13 +1,34 @@
+
+.thred {
+    width: 100%;
+    position: relative;
+    padding-bottom: 2px;
+
+}
+
+.expanded {
+    position: absolute;
+    margin-bottom: 3rem;
+    width: inherit;
+ 
+}
+
+.collapsed {
+    position: absolute;
+    width: inherit;
+}
+
 .message {
     display: flex;
     align-items: stretch;
+    //margin-top: 2rem;
     color: $color-text;
-    background-color: $color-background-white;
+    background-color: $color-white;
     box-shadow: 2px 2px 5px rgba($color-black, .10);
     @include borderRaius(7px);
 
     width:100%;
-    height: 100px;
+    //height: 100px;
 
     &__subject {
         width: 70%;
@@ -24,7 +45,24 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        text-align: end;
+        position: relative;
     }
+}
+
+$msg-counter-height: 1.2rem;
+
+.msg-counter {
+    position: absolute;
+    top: -$msg-counter-height/2;
+    right: 1.5rem;
+    height: $msg-counter-height;
+    width: 11rem;
+    text-align: center;
+    font-size: .8rem;
+    color: $color-white;
+    padding: 2px 0 1px 0;
+    @include borderRaius(200px);
 }
 
 .paragraph {
@@ -53,4 +91,16 @@
 
 .low-rating {
     color: $color-header-low-rating;
+}
+
+.bg-high-rating {
+    background-color: $color-background-high-rating;
+}
+
+.bg-low-rating {
+    background-color: $color-background-low-rating;
+}
+
+.hidden {
+    display: none;
 }

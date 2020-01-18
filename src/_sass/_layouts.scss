@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3rem 1.5rem;
     width: 550px;
 
     @media only screen and (max-width: $bp-custom) {
@@ -19,7 +20,7 @@
     }
 
 
-    height : 400px;
+    //height : 400px;
     //background-color: yellow;
    
 }
