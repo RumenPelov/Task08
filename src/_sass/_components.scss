@@ -3,14 +3,12 @@
     width: 100%;
     position: relative;
     padding-bottom: 2px;
-
 }
 
 .expanded {
     position: relative;
     margin-bottom: 2rem;
     width: inherit;
- 
 }
 
 .collapsed {
@@ -21,14 +19,12 @@
 .message {
     display: flex;
     align-items: stretch;
-    //margin-top: 2rem;
     color: $color-text;
     background-color: $color-white;
     box-shadow: 2px 2px 5px rgba($color-black, .10);
     @include borderRaius(7px);
 
     width:100%;
-    //height: 100px;
 
     &__subject {
         width: 70%;
