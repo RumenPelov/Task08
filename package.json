@@ -40,7 +40,7 @@
   "devDependencies": {
     "@types/node-sass": "^4.11.0",
     "@types/nodemon": "^1.19.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^2.0.2"
   }
 }
